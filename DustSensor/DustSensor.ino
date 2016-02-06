@@ -64,9 +64,6 @@ void setup() {
 }
  
 void loop() {
-
-  time_t how = now();
-  Serial.println(how);
   
   duration = pulseIn(sensorPin, LOW);
   lowpulseoccupancy = lowpulseoccupancy+duration;
