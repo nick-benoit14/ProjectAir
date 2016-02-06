@@ -54,7 +54,7 @@ void setup() {
    dataFile = SD.open("datalog.txt", FILE_WRITE); 
    if (dataFile) {
     // Print csv headers
-    dataFile.println("Concentration (pcs/0.01cf),Time (Unix Timestamp) ,Location (Lat / Long)");
+    dataFile.println("Concentration (pcs/0.01cf), Location (Lat / Long)");
     dataFile.close();
   }
   // if the file isn't open, pop up an error:
@@ -82,8 +82,6 @@ void loop() {
 
     String dataString = ""; // Hold data info    
     dataString += String(concentration);
-    dataString += ", ";
-    dataString += String(now());
     dataString += ", ";
     dataString += String(counter++);
     
